@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb72e7b1-c6ae-4678-915f-6d0ad72b9428" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuario/cabecera.php" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/cabecera.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/usuario/carrito.php" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/carrito.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuario/categoria.php" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/categoria.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuario/checkout.php" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/checkout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuario/eliminaralbaran.php" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/eliminaralbaran.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuario/perfil.php" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/perfil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuario/pie.php" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/pie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usuario/producto.php" beforeDir="false" afterPath="$PROJECT_DIR$/usuario/producto.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/usuario/carrito.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="103" selection-start-line="103" selection-end-line="103" />
+            <state relative-caret-position="297">
+              <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -53,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/usuario/producto.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="71" column="18" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
+            <state relative-caret-position="17">
+              <caret line="71" column="42" lean-forward="true" selection-start-line="71" selection-start-column="42" selection-end-line="71" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -65,8 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/nuevo-producto.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="34" column="34" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="34" />
+            <state relative-caret-position="107">
+              <caret line="42" column="121" selection-start-line="42" selection-start-column="96" selection-end-line="42" selection-end-column="121" />
             </state>
           </provider>
         </entry>
@@ -160,9 +152,9 @@
         <option value="$PROJECT_DIR$/usuario/perfil.php" />
         <option value="$PROJECT_DIR$/usuario/cabecera.php" />
         <option value="$PROJECT_DIR$/usuario/pie.php" />
-        <option value="$PROJECT_DIR$/usuario/carrito.php" />
         <option value="$PROJECT_DIR$/usuario/categoria.php" />
         <option value="$PROJECT_DIR$/usuario/producto.php" />
+        <option value="$PROJECT_DIR$/usuario/carrito.php" />
       </list>
     </option>
   </component>
@@ -263,12 +255,12 @@
       <workItem from="1556966255319" duration="13000000" />
       <workItem from="1557425471268" duration="32768000" />
       <workItem from="1558029950555" duration="39000" />
-      <workItem from="1558030258928" duration="27459000" />
+      <workItem from="1558030258928" duration="28585000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103085000" />
+    <option name="totallyTimeSpent" value="104211000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -288,7 +280,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.101472996" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.18821605" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -510,13 +502,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/usuario/carrito.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="103" selection-start-line="103" selection-end-line="103" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/usuario/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -533,15 +518,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/nuevo-producto.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="34" column="34" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="34" />
+        <state relative-caret-position="107">
+          <caret line="42" column="121" selection-start-line="42" selection-start-column="96" selection-end-line="42" selection-end-column="121" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/usuario/producto.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="71" column="18" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
+        <state relative-caret-position="17">
+          <caret line="71" column="42" lean-forward="true" selection-start-line="71" selection-start-column="42" selection-end-line="71" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/usuario/carrito.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
         </state>
       </provider>
     </entry>

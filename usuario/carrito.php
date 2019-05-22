@@ -46,15 +46,14 @@ if(!$_SESSION["usuario"]) {
         <div class="alert alert-danger" style ="text-align: center;" role="alert">
             No tiene nada añadido al carrito
         </div>
-            <?php
+                    <?php
                 }else {
 
-                    if ($resultado->num_rows > 0) {
-                        // output data of each row
-                        while ($filaproducto = $resultado->fetch_assoc()) {
-            ?>
+
+                            ?>
     <div class="container scroll info">
         <table class="table">
+
             <thead>
             <tr>
                 <th data-field="name">Nombre Producto</th>
@@ -62,11 +61,14 @@ if(!$_SESSION["usuario"]) {
                 <th data-field="price">Precio</th>
                 <th data-field="quantity">Unidades</th>
                 <th data-field="total">Total</th>
+
             </tr>
 
             <tbody>
             <?php
-
+            if ($resultado->num_rows > 0) {
+            // output data of each row
+            while ($filaproducto = $resultado->fetch_assoc()) {
 
                                 $id_productdb = $filaproducto['id'];
                                 $nombre_producto = $filaproducto['nombre'];
