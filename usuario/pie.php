@@ -1,9 +1,9 @@
 <!-- Footer -->
-<footer class="page-footer font-small elegant-color">
+<footer class="page-footer font-small elegant-color bottom-fixed">
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2018 Copyright:
-        <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+    <div class="footer-copyright text-center py-3">© 2019 Copyright:
+        <a href="https://mdbootstrap.com/education/bootstrap/"> PCMaster</a>
     </div>
     <!-- Copyright -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">

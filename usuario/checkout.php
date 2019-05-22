@@ -6,7 +6,7 @@ include("../config/db.php");
 if(!$_SESSION["usuario"]){
     header("Location: ../login.php");
 }
-
+$idsesion=$_SESSION['id'];
 ?>
     <div class="container-fluid product-page">
         <div class="container current-page">

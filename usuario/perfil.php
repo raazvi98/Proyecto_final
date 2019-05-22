@@ -91,3 +91,6 @@ $email = $fila["email"];
     </script>
   </body>
 </html>
+<?php
+include("pie.php");
+?>

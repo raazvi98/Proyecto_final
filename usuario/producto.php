@@ -20,6 +20,7 @@ if(isset($_SESSION["id"])){
 else{
     $_SESSION["id"] = "";
 }
+$cantidad = isset($_POST['cantidad']) ? $_POST['cantidad'] : '';
 ?>
 
 <script type="text/javascript">
@@ -67,6 +68,25 @@ else{
         <p><h5>Descripción:  </h5><?= $fila["contenido"] ?></p>
 
        </div>
+           <div class="form-group ">
+               <h5>añadir al carrito:</h5>
+               <input id="icon_prefix" type="number" placeholder="Cantidad" name="cantidad" min="1" class="validate" required>
+
+           </div>
+           <?php
+
+           if (isset($_POST['buy'])) {
+               $db= new Db();
+               $sql = "INSERT INTO albaran(id_producto, cantidad, id_usuario) VALUES (?, ? ,?)";
+               $db->lanzar_consulta($sql, array($id_producto, $cantidad, $_SESSION["id"]));
+
+           }
+
+           ?>
+
+           <div class="center-align">
+               <button type="submit" name="buy" class="btn btn-outline-primary">AÑADIR AL CARRITO</button>
+           </div>
         </form>
      </div>
    </div>

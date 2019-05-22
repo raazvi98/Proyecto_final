@@ -9,7 +9,7 @@ include("../include/funciones.php");
     $db=new Db();
    $eliminar = "DELETE FROM albaran WHERE  id_producto = '$id'";
    $resultado = $db->lanzar_consulta($eliminar);
-$db->desconectar();
+    $db->desconectar();
 
 
    header("Location: carrito.php");

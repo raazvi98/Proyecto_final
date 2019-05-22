@@ -24,7 +24,7 @@ else
     <!-- libreria para usar los iconos de los menus y botones -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </head>
-<nav class="navbar navbar-expand-lg navbar-dark elegant-color">
+<nav class="navbar navbar-expand-lg navbar-dark elegant-color sticky-top">
 
     <!-- Navbar brand -->
     <a class="navbar-brand" href="index.php">
@@ -45,6 +45,9 @@ else
 
             <li class="nav-item">
                 <a class="nav-link" href="categoria.php"><i class="fas fa-align-center"></i>Categorias</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="carrito.php"><i class="fas fa-shopping-cart"></i></i>Carrito</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="perfil.php"><i class="fas fa-user-circle"></i></i>Perfil</a>
