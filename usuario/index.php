@@ -51,7 +51,9 @@ else
     </div>
 </div>
 <div class="row">
+
     <?php
+
     $db = new Db();
 
     $sql = "SELECT COUNT(*) AS cantidad FROM productos" . $carga;

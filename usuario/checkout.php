@@ -7,6 +7,8 @@ if(!$_SESSION["usuario"]){
     header("Location: ../login.php");
 }
 $idsesion=$_SESSION['id'];
+
+
 ?>
     <div class="container-fluid product-page">
         <div class="container current-page">
@@ -22,36 +24,44 @@ $idsesion=$_SESSION['id'];
 
     <div class="container scroll info">
         <table class="highlight">
-            <thead>
-            <tr>
-                <th data-field="name">Usuario</th>
-                <th data-field="category">Direccion</th>
-                <th data-field="price">Email</th>
-                <th data-field="quantity">Forma de Pago</th>
-            </tr>
-            </thead>
+
             <tbody>
             <?php
 
             $db=new Db();
             //get products
-            $sqlcarrito = "SELECT usuarios.usuario as 'usuario', usuarios.direccion as 'direccion', usuarios.email as 'email', usuarios.forma_pago as 'forma_pago'
-FROM usuarios, producto WHERE usuarios.id='$idsesion'";
-            $resultado = $db->lanzar_consulta($sqlcarrito);
+            $sql = "SELECT usuario, direccion, email, pago FROM usuarios WHERE id='$idsesion'";
+            $resultado = $db->lanzar_consulta($sql);
+            $db->desconectar();
             if ($resultado->num_rows > 0) {
                 // output data of each row
-                while($filaproducto = $resultado->fetch_assoc()) {
-                    $usuario = $filaproducto['usuario'];
-                    $direccion = $filaproducto['direccion'];
-                    $email = $filaproducto['email'];
-                    $formapago = $filaproducto['forma_pago'];
+                while($fila = $resultado->fetch_assoc()) {
+                    $usuario = $fila['usuario'];
+                    $direccion = $fila['direccion'];
+                    $email = $fila['email'];
+                    $pago = $fila['pago'];
                     ?>
-                    <tr>
-                        <td><?= $usuario; ?></td>
-                        <td><?= $direccion; ?></td>
-                        <td><?= $email; ?></td>
-                        <td><?= $formapago; ?></td>
-                    </tr>
+                    <div class="container">
+                        <p></p>
+                        <p></p>
+                        <div class="jumbotron jumbotron-fluid">
+                            <div class="container">
+                                <h1 class="title h1 my-4" align="center">
+                                    Datos De envio
+                                </h1>
+                                <div class="article__content">
+                                    <p class="nav-link"align="center"><i class="far fa-user-circle"></i>  usuario:   <?= $usuario; ?></p>
+                                    <p class="nav-link" align="center"><i class="fas fa-signature"></i>   direccion:  <?= $direccion; ?></p>
+                                    <p class="nav-link"  align="center"><i class="fas fa-envelope"></i>  email:  <?= $email; ?></p>
+                                    <p class="nav-link" align="center"><i class="fas fa-city"></i>   pago:  <?= $pago; ?></p>
+                                    <div class="center-align">
+                                        <a type="submit" name="pagar" href="index.php?Pedido Realizado" class="btn btn-outline-primary">HACER EL PEDIDO</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 <?php }}?>
             </tbody>
         </table>
@@ -65,9 +75,7 @@ FROM usuarios, producto WHERE usuarios.id='$idsesion'";
 
         ?>
 
-        <div class="center-align">
-            <a type="submit" name="pagar" href="index.php?Pedido Realizado" class="btn-large meh button-rounded waves-effect waves-light ">HACER EL PEDIDO</a>
-        </div>
+
     </div>
 <?php
 include("pie.php");

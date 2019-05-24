@@ -7,7 +7,7 @@ include("cabecera.php");
 include("../include/funciones.php");
 $idU = $_SESSION["id"];
 $db = new Db();
-$sql = "SELECT usuario, nombre, apellidos, email FROM usuarios WHERE id = ?";
+$sql = "SELECT usuario, nombre, apellidos, email, direccion, ciudad FROM usuarios WHERE id = ?";
 $resultado = $db->lanzar_consulta($sql ,array($idU));
 $db->desconectar();
 
@@ -15,9 +15,9 @@ $fila = $resultado->fetch_assoc();
 $nombreU =$fila["usuario"];
 $nombre =$fila["nombre"];
 $apellido = $fila["apellidos"];
-
 $email = $fila["email"];
-
+$direccion = $fila["direccion"];
+$ciudad = $fila["ciudad"];
 ?>
 
 
@@ -32,11 +32,10 @@ $email = $fila["email"];
                       </h1>
                       <div class="article__content">
                           <p class="nav-link"align="center"><i class="far fa-user-circle"></i>  Nombre:   <?= $nombre; ?></p>
-                          <p class="nav-link" align="center">Apellido:  <?= $apellido; ?></p>
+                          <p class="nav-link" align="center"><i class="fas fa-signature"></i>   Apellido:  <?= $apellido; ?></p>
                           <p class="nav-link"  align="center"><i class="fas fa-envelope"></i>  Email:  <?= $email; ?></p>
-                          <p class="nav-link" align="center">Fecha de nacimiento:  </p>
-                          <p class="nav-link" align="center">Dirección:  </p>
-                          <p class="nav-link" align="center">País:  </p>
+                          <p class="nav-link" align="center"><i class="fas fa-compass"></i>   Dirección:  <?= $direccion; ?></p>
+                          <p class="nav-link" align="center"><i class="fas fa-city"></i>   Ciudad:  <?= $ciudad; ?></p>
                       </div>
                   </div>
               </div>

@@ -37,6 +37,10 @@ else
             <input type="text" id="defaultRegisterFormLastName" name="apellidos" class="form-control" placeholder="Apellidos">
         </div>
     </div>
+    <input type="text" id="defaultRegisterFormLastName" name="direccion" class="form-control" placeholder="Direccion">
+    <p></p>
+    <input type="text" id="defaultRegisterFormLastName" name="ciudad" class="form-control" placeholder="Ciudad">
+    <p></p>
     <input type="text" id="defaultRegisterFormFirstName" name="usuario" class="form-control" placeholder="Usuario">
 <p></p>
     <!-- E-mail -->
@@ -46,6 +50,29 @@ else
     <input type="password" id="defaultRegisterFormPassword" name="contrasena" class="form-control" placeholder="Contraseña" aria-describedby="defaultRegisterFormPasswordHelpBlock">
     <p></p>
     <input type="password" id="defaultRegisterFormPassword" name="recontrasena" class="form-control" placeholder="Introduce la contraseña de nuevo" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+    <p></p>
+    <h5>metodo de pago</h5>
+    <!-- Group of default radios - option 1 -->
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="credito" id="inlineRadio1" value="option1">
+        <label class="form-check-label" for="inlineRadio1">Credito</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="debito" id="inlineRadio2" value="option2">
+        <label class="form-check-label" for="inlineRadio2">Debito</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="bitcoin" id="inlineRadio3" value="option3">
+        <label class="form-check-label" for="inlineRadio3">Bitcoin</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="paypal" id="inlineRadio4" value="option3">
+        <label class="form-check-label" for="inlineRadio4" >Paypal</label>
+    </div>
+
+
+
+
 
 
 

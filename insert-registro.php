@@ -9,6 +9,27 @@ $email = $_POST["email"];
 $usuario = $_POST["usuario"];
 $contrasena = $_POST["contrasena"];
 $recontrasena = $_POST ["recontrasena"];
+$direccion = $_POST["direccion"];
+$ciudad = $_POST["ciudad"];
+$pago = "";
+
+if(isset($_POST["credito"])){
+    $pago = "credito";
+}
+
+else if(isset($_POST["debito"])){
+    $pago = "debito";
+
+}
+
+else if(isset($_POST["bitcoin"])){
+    $pago = "bitcoin";
+
+}
+
+else if(isset($_POST["paypal"])){
+    $pago = "paypal";
+}
 
 
 $db = new Db();
@@ -18,6 +39,7 @@ $resultado = $db->lanzar_consulta($sql);
 $fila = $resultado->fetch_assoc();
 $comprobacionusuario = $fila["usuario"];
 $comprobacionemail = $fila["email"];
+
 
 
 if ($contrasena != $recontrasena) {
@@ -36,8 +58,8 @@ if($comprobacionemail == $email){
     exit();
 }
 
-$sql = "INSERT INTO usuarios (nombre,apellidos,usuario,contrasena,email) VALUES (?,?,?,SHA(?),?)";
-$db->lanzar_consulta($sql, array($nombre,$apellidos,$usuario,$contrasena,$email));
+$sql = "INSERT INTO usuarios (nombre,apellidos,usuario,contrasena,email,pago,direccion,ciudad) VALUES (?,?,?,SHA(?),?,?,?,?)";
+$db->lanzar_consulta($sql, array($nombre,$apellidos,$usuario,$contrasena,$email,$pago,$direccion,$ciudad));
 
 session_start();
 $_SESSION["usuario"] = $usuario;
