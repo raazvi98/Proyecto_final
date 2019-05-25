@@ -7,6 +7,7 @@ include("../config/db.php");
 if(!$_SESSION["usuario"]) {
     header("Location: ../login.php");
 }
+
     ?>
     <script type="text/javascript">
         $(document).ready(function() {
@@ -22,6 +23,10 @@ if(!$_SESSION["usuario"]) {
             });
         });
     </script>
+        <script src="jspdf/dist/jspdf.min.js"></script>
+        <script src="jspdf.plugin.autotable.min.js"></script>
+
+
     <div class="container-fluid product-page">
         <div class="container current-page">
             <nav>
@@ -40,8 +45,9 @@ if(!$_SESSION["usuario"]) {
                             FROM categorias, productos, albaran
                             WHERE albaran.id_producto = productos.id AND productos.id_categoria = categorias.id AND albaran.cantidad > 0 AND albaran.id_usuario='$id_usuario'";
                 $resultado = $db->lanzar_consulta($sqlcarrito);
+
                 if ($resultado->num_rows == 0){
-        ?>
+                    ?>
 
         <div class="alert alert-danger" style ="text-align: center;" role="alert">
             No tiene nada añadido al carrito
@@ -84,7 +90,7 @@ if(!$_SESSION["usuario"]) {
                                     <td><?= $cantidad_producto; ?></td>
                                     <td><?= $precio_producto * $cantidad_producto; ?> €</td>
                                     <td><a href="eliminaralbaran.php?id=<?= $id_productdb; ?>"><i
-                                                    class="material-icons red-text">Eliminar</i></a>
+                                                    onclick="return confirm('¿Estás seguro?');"  class="material-icons red-text">Eliminar</i></a>
                                     </td>
                                 </tr>
                                 </thead>
