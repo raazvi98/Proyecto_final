@@ -94,10 +94,14 @@ while($r=$resultado->fetch_object()){
     <script>
         $("#generarpdf").click(function(){
             var pdf = new jsPDF();
-            var imgData  =  'data:image/jpeg;base64,/img/race.jpg';
+            /*var imgData  =  'data:image/jpeg;base64,/img/race.jpg';
             pdf.addImage(imgData, 'JPEG', 10, 10, 50, 70);
-            pdf.text(20,20,"Factura");
 
+            */
+            pdf.setFont("helvetica");
+            pdf.setFontType("bold");
+            pdf.setFontSize(22);
+            pdf.text(20,20,"Factura");
             var columns = ["Id", "Nombre", "Precio", "Cantidad", "Total"];
             var data = [
                 <?php foreach($data as $d):?>
