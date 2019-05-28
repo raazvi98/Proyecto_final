@@ -2,6 +2,7 @@
 include("../config/db.php");
 include("../include/funciones.php");
 include("cabecera.php");
+include("second-cabecera.php");
 ?>
 <div class="row">
     <?php
@@ -14,8 +15,8 @@ include("cabecera.php");
 
     if ($resultado->num_rows == 0){
         ?>
-
-        <div class="alert alert-danger" style ="text-align: center;" role="alert">
+        <p></p>
+        <div class="alert alert-danger" align="center" style ="align-content: center; text-align: center;" role="alert">
             No hemos encontrado nada con la palabra ' <?=$texto ?> '
         </div>
         <?php
@@ -25,7 +26,7 @@ include("cabecera.php");
         ?>
 
 
-        <div class="alert alert-danger" style="text-align: center;" role="alert">
+        <div class="alert alert-danger" style="  text-align: center;" role="alert">
             No has introducido nada :(
         </div>
 

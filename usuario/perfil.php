@@ -4,6 +4,7 @@ $id_usuario=$_SESSION['id'];
 
 include("../config/db.php");
 include("cabecera.php");
+include("second-cabecera.php");
 include("../include/funciones.php");
 $idU = $_SESSION["id"];
 $db = new Db();

@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 include("cabecera.php");
 include("pie.php");
 if (!isset($_SESSION["usuario"]))
@@ -27,6 +27,7 @@ else
         <div class="col-lg-4">
 
             <p></p>
+            <p>.</p>
             <h2>Nueva publicación</h2>
             <div class="form-group">
                 <label for="formGroupExampleInput">Marca: </label>
@@ -50,7 +51,7 @@ else
             </form>
             <div class="form-group">
                 <label for="formGroupExampleInput">ID Categoria: </label>
-                <input type="text" name="id_categoria"class="form-control" id="formGroupExampleInput" placeholder="ID" required>
+                <input type="text" name="id_categoria"class="form-control" id="formGroupExampleInput" placeholder="1moviles 2tv 3pc 4auriculares 5consolas 6altavoces" required>
             </div>
 
             <button type="submit" class="btn btn-outline-dark">Enviar</button>

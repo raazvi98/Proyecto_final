@@ -9,6 +9,7 @@ else
     $mensaje = "";
 include("../include/funciones.php");
 include("cabecera.php");
+include("second-cabecera.php");
 include("../config/db.php");
 if(!$_SESSION["usuario"]){
     header("Location: ../login.php");
@@ -31,7 +32,7 @@ $cantidad = isset($_POST['cantidad']) ? $_POST['cantidad'] : '';
                 url: "eliminar_comentario" + element.attr("id"),
                 dataType: 'json',
                 success: function() {
-                    element.parent().parent().parent().remove();
+                    element.parent().parent().parent().parent().remove();
                 }
             });
         });

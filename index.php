@@ -50,7 +50,7 @@ else
     $sql = "SELECT id,nombre,foto,precio FROM productos order by precio LIMIT 6";
     $resultado = $db->lanzar_consulta($sql);
 
-    $sql = "SELECT id,nombre,foto,precio FROM productos ORDER BY precio " . $carga .  " LIMIT " . $pagina * TAMANO_PAGINA . "," . TAMANO_PAGINA;
+    $sql = "SELECT id,nombre,foto,precio FROM productos ORDER BY precio DESC " . $carga .  " LIMIT " . $pagina * TAMANO_PAGINA . "," . TAMANO_PAGINA;
     $resultado = $db->lanzar_consulta($sql, $params);
     while ($fila = $resultado->fetch_assoc()) {
 

@@ -24,7 +24,7 @@ else
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 </head>
 
-<nav class="navbar navbar-expand-lg navbar-dark elegant-color ">
+<nav class="navbar navbar-expand-lg navbar-dark elegant-color sticky-top">
     <a class="navbar-brand" href="index.php">
         <img src="img/master.png" height="30" alt="mdb logo">
         PCMaster</a>

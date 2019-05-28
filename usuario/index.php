@@ -2,6 +2,7 @@
 session_start();
 include("../include/funciones.php");
 include("cabecera.php");
+include("second-cabecera.php");
 include("../config/db.php");
 if(!$_SESSION["usuario"]){
     header("Location: ../login.php");
@@ -29,6 +30,7 @@ else
     $pagina = 0;
 
 ?>
+
 
 
 

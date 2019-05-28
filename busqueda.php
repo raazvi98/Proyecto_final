@@ -2,6 +2,7 @@
 include("config/db.php");
 include("include/funciones.php");
 include("cabecera.php");
+
 ?>
 <div class="row">
 <?php

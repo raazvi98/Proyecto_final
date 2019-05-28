@@ -4,7 +4,6 @@ $id_usuario= $_SESSION['id'];
 include("../include/funciones.php");
 include("cabecera.php");
 include("../config/db.php");
-$idsesion=$_SESSION['id'];
 if(!$_SESSION["usuario"]){
     header("Location: ../login.php");
 }
@@ -21,7 +20,7 @@ if(!$_SESSION["usuario"]){
 <?php
 $con  = new mysqli("localhost","root","","ecommerce");
 //get products
-$sqlcarrito = "SELECT productos.nombre,productos.id, productos.precio , albaran.id_usuario,albaran.cantidad
+$sqlcarrito = "SELECT productos.nombre,productos.id, productos.foto, productos.precio , albaran.id_usuario,albaran.cantidad
                             FROM categorias, productos, albaran
                             WHERE albaran.id_producto = productos.id AND productos.id_categoria = categorias.id AND albaran.cantidad > 0 AND albaran.id_usuario='$id_usuario'";
 $resultado = $con->query($sqlcarrito);
@@ -53,7 +52,7 @@ while($r=$resultado->fetch_object()){
 
         $db=new Db();
         //get products
-        $sql = "SELECT usuario, direccion, email, pago FROM usuarios WHERE id='$idsesion'";
+        $sql = "SELECT usuario, direccion, email, pago FROM usuarios WHERE id='$id_usuario'";
         $resultado = $db->lanzar_consulta($sql);
         $db->desconectar();
         if ($resultado->num_rows > 0) {
@@ -78,7 +77,7 @@ while($r=$resultado->fetch_object()){
                                 <p class="nav-link"  align="center"><i class="fas fa-envelope"></i>  email:  <?= $email; ?></p>
                                 <p class="nav-link" align="center"><i class="fas fa-city"></i>   pago:  <?= $pago; ?></p>
                                 <div class="text-center">
-                                    <button id="generarpdf" class="btn btn-default  btn-lg" >Generar PDF</button>
+                                    <button id="generarpdf" class="btn btn-elegant-color  btn-lg" >Generar PDF</button>
                                 </div>
                             </div>
                         </div>
@@ -105,9 +104,11 @@ while($r=$resultado->fetch_object()){
             var columns = ["Id", "Nombre", "Precio", "Cantidad", "Total"];
             var data = [
                 <?php foreach($data as $d):?>
-                [<?php echo $d->id; ?>,  "<?php echo $d->nombre; ?>", "<?php echo $d->precio; ?>", "<?php echo $d->cantidad; ?>",  "<?php echo $d->precio * $d->cantidad; ?>"],
+                [<?php echo $d->id; ?>, "<?php echo $d->nombre; ?>", "<?php echo $d->precio; ?>", "<?php echo $d->cantidad; ?>",  "<?php echo $d->precio * $d->cantidad; ?>"],
                 <?php endforeach; ?>
             ];
+
+
 
             pdf.autoTable(columns,data,
                 { margin:{ top: 25  }}

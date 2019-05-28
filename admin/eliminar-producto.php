@@ -6,10 +6,10 @@ if (!isset($_SESSION["usuario"])) {
 include("../config/db.php");
 include("../include/funciones.php");
 
-$publicacion = $_REQUEST["publicacion"];
+$producto = $_REQUEST["producto"];
 $db = new Db();
 $sql = "DELETE FROM productos WHERE id = ?";
-$db->lanzar_consulta($sql, array($publicacion));
+$db->lanzar_consulta($sql, array($producto));
 $db->desconectar();
 
-header("Location: index.php?id=inicio");
+header("Location: index.php");

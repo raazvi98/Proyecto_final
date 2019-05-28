@@ -42,10 +42,6 @@ else
 
         <!-- Links -->
         <ul class="navbar-nav mr-auto">
-
-            <li class="nav-item">
-                <a class="nav-link" href="categoria.php"><i class="fas fa-align-center"></i>Categorias</a>
-            </li>
             <li class="nav-item">
                 <a class="nav-link" href="carrito.php"><i class="fas fa-shopping-cart"></i></i>Carrito</a>
             </li>
@@ -74,4 +70,5 @@ else
     <!-- Collapsible content -->
 
 </nav>
+
 <!--/.Navbar-->

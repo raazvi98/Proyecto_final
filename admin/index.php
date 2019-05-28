@@ -1,5 +1,4 @@
 <?php
-session_start();
 include("../include/funciones.php");
 include("cabecera.php");
 include("../config/db.php");
@@ -20,7 +19,7 @@ if(!$_SESSION["usuario"]){
         $("a.btn").click(function() {
             var element = $(this);
             $.ajax({
-                url: "eliminar_producto" + element.attr("id"),
+                url: "eliminar-producto" + element.attr("id"),
                 dataType: 'json',
                 success: function() {
                     element.parent().parent().remove();
