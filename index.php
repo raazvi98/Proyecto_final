@@ -2,6 +2,7 @@
 session_start();
 include("include/funciones.php");
 include("cabecera.php");
+include("second-cabecera.php");
 include("config/db.php");
 if (isset($_REQUEST["id"]))
     $id = $_REQUEST["id"];
