@@ -77,6 +77,13 @@ while($r=$resultado->fetch_object()){
                                 <p class="nav-link"  align="center"><i class="fas fa-envelope"></i>  email:  <?= $email; ?></p>
                                 <p class="nav-link" align="center"><i class="fas fa-city"></i>   pago:  <?= $pago; ?></p>
                                 <div class="text-center">
+                                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                                        <input type="hidden" name="cmd" value="_s-xclick">
+                                        <input type="hidden" name="hosted_button_id" value="AREVN55CPMW86">
+                                        <input type="image" src="https://www.paypalobjects.com/es_ES/ES/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal, la forma rápida y segura de pagar en Internet.">
+                                        <img alt="" border="0" src="https://www.paypalobjects.com/es_ES/i/scr/pixel.gif" width="1" height="1">
+                                    </form>
+
                                     <button id="generarpdf" class="btn btn-elegant-color  btn-lg" >Generar PDF</button>
                                 </div>
                             </div>

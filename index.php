@@ -29,35 +29,28 @@ else
     <div class="card card-image" style="background-image: url(img/pc.jpg);">
         <div class="text-white text-center rgba-stylish-strong py-5 px-4">
             <div class="py-5">
-
-                <!-- Content -->
-
                 <h2 class="card-title h2 my-4 py-2">Tu tienda de componentes de informática</h2>
                 <p class="mb-4 pb-2 px-md-5 mx-md-5">Bienvenido!</p>
-
-
             </div>
         </div>
     </div>
-
 </div>
-<p></p>
-<p></p>
+        <p></p>
+        <p></p>
 <h1 align="center">Productos con mejores precios</h1>
-<div class="row">.
-    <?php
-    $db = new Db();
-    $sql = "SELECT id,nombre,foto,precio FROM productos order by precio LIMIT 6";
-    $resultado = $db->lanzar_consulta($sql);
+    <div class="row">.
+        <?php
+        $db = new Db();
+        $sql = "SELECT id,nombre,foto,precio FROM productos order by precio LIMIT 6";
+        $resultado = $db->lanzar_consulta($sql);
 
-    $sql = "SELECT id,nombre,foto,precio FROM productos ORDER BY precio DESC " . $carga .  " LIMIT " . $pagina * TAMANO_PAGINA . "," . TAMANO_PAGINA;
-    $resultado = $db->lanzar_consulta($sql, $params);
-    while ($fila = $resultado->fetch_assoc()) {
+        $sql = "SELECT id,nombre,foto,precio FROM productos ORDER BY precio DESC " . $carga .  " LIMIT " . $pagina * TAMANO_PAGINA . "," . TAMANO_PAGINA;
+        $resultado = $db->lanzar_consulta($sql, $params);
+        while ($fila = $resultado->fetch_assoc()) {
 
 
-        ?>
+            ?>
         <div class="card m-5" style="width: 22rem;">
-
             <!-- Card image -->
             <div class="view overlay">
                 <img class="card-img-top" src="img/<?= $fila["foto"] ?>" alt="Card image cap">
@@ -82,18 +75,16 @@ else
         </div>
 
 
+                <?php
+            }
+            $sql = "SELECT COUNT(*) AS cantidad FROM productos" . $carga;
+            $resultado = $db->lanzar_consulta($sql, $params);
+            $fila = $resultado->fetch_assoc();
+            $entradas = $fila["cantidad"];
 
-        <?php
-    }
-    $sql = "SELECT COUNT(*) AS cantidad FROM productos" . $carga;
-    $resultado = $db->lanzar_consulta($sql, $params);
-    $fila = $resultado->fetch_assoc();
-    $entradas = $fila["cantidad"];
-
-    $paginas = $entradas / TAMANO_PAGINA;
-    ?>
-
-</div>
+            $paginas = $entradas / TAMANO_PAGINA;
+            ?>
+    </div>
 <br>
 <nav class="blog-pagination"  style="align-content: center">
     <ul class="pagination pg-blue justify-content-center pagination-lg">
