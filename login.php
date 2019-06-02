@@ -42,20 +42,10 @@ else
         <!-- Password -->
         <input type="password" id="defaultLoginFormPassword" name="contrasena" class="form-control mb-4" placeholder="Contraseña">
 
-        <div class="d-flex justify-content-around">
-            <div>
-                <!-- Remember me -->
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
-                    <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
-                </div>
-            </div>
-
-        </div>
 
         <!-- Sign in button -->
-        <button class="btn btn-outline-black my-4 btn-block" type="submit">Aceptar</button>
-
+        <button class="btn btn-outline-secondary my-4 btn-block" type="submit">Iniciar Sesión</button>
+        <a class="btn btn-outline-secondary my-4 btn-block"  href="registro.php">Registrarte</a>
         <!-- Register -->
     </form>
     <?php
