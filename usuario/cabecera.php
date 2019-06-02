@@ -60,7 +60,7 @@ else
         <form class="form-inline" action="busqueda.php" method="get">
 
             <div class="md-form my-0">
-                <input class="form-control mr-sm-2" name="texto"type="text" placeholder="Search" aria-label="Search">
+                <input class="form-control mr-sm-2" name="texto"type="text" placeholder="Buscar" aria-label="Search">
 
                 <input type="hidden" name="id" value="busqueda"/>
             </div>

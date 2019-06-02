@@ -61,9 +61,9 @@ else
         </ul>
 
             <form class="form-inline my-2 my-lg-0 ml-auto" action="busqueda.php" method="get">
-                <input class="form-control mr-1" name="texto" type="text" placeholder="" aria-label="Search">
+                <input class="form-control mr-1" name="texto" type="text" placeholder="Buscar algo..." aria-label="Search">
                 <input type="hidden" name="id" value="busqueda"/>
-                <button class="btn btn-outline-white btn-md my-2 my-sm-0 ml-3" type="submit">Search</button>
+                <button class="btn btn-outline-white btn-md my-2 my-sm-0 ml-3" type="submit">Buscar</button>
 
         </nav>
     </div>

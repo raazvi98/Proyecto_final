@@ -31,8 +31,8 @@ $id_categoria = isset($_GET['id']) ? $_GET['id'] : '';
             $nonmbre_categoria = $filacategoria['nombre'];
             $icono = $filacategoria['icono'];
             ?>
-            <li class="nav-item">
-                <a class="nav-link active" href="categoria.php?id=<?= $id_categoriadb; ?>!">      <?php if($id_categoriadb == $id_categoria)  ?>       <?= $nonmbre_categoria; ?>        <br></a>
+            <li class="nav justify-content-center grey lighten-4 py-4 font-weight-bold">
+                <a class="nav-link active dark-grey-text" href="categoria.php?id=<?= $id_categoriadb; ?>!">      <?php if($id_categoriadb == $id_categoria)  ?>       <?= $nonmbre_categoria; ?>        <br></a>
             </li>
         <?php }} ?>
 </ul>

@@ -41,11 +41,11 @@ else
             <!-- Content -->
             <?php if (isset($_SESSION["usuario"])) {
                 ?>
-                <h2 class="card-title h2 my-4 py-2"> Bienvenid@ <?= ucfirst($_SESSION["usuario"]) ?>!</h2>
+                <h2 class="card-title h2 my-4 py-2 font-weight-bold"> Bienvenid@ <?= ucfirst($_SESSION["usuario"]) ?>!</h2>
                 <?php
             }
             ?>
-            <h class="mb-4 pb-2 px-md-5 mx-md-5">Has iniciado sesión</h>
+            <h class="mb-4 pb-2 px-md-5 mx-md-5 font-weight-bold">Has iniciado sesión</h>
 
 
 
@@ -132,17 +132,8 @@ else
             ?>
         </ul>
     </nav>
+    <?php
 
+    include("pie.php");
 
-
-
-
-
-
-
-
-<?php
-
-include("pie.php");
-
-?>
+    ?>

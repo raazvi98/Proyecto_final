@@ -60,7 +60,6 @@ if($_SESSION["usuario"] != 'admin'){
                         <th>Usuario</th>
                         <th>E-mail</th>
                         <th>Dirección</th>
-                        <th>Modificar</th>
                         <th>Eliminar</th>
                     </tr>
                     </thead>
@@ -81,7 +80,6 @@ if($_SESSION["usuario"] != 'admin'){
                             <td><?= $fila["usuario"]?></td>
                             <td><?= $fila["email"]?></td>
                             <td><?= $fila["direccion"]?></td>
-                            <td><a class="btn btn-warning btn-sm" href="nuevo-producto.php?modificar=true&id_producto=<?= $fila["id"] ?>">Modificar</a></td>
                             <td><a class="btn btn-danger btn-sm" data-toggle="modal" href="eliminar-cliente.php?cliente=<?= $fila["id"]?>"
                                    onclick="return confirm('¿Estás seguro?');">Eliminar</a></td>
                         </tr>

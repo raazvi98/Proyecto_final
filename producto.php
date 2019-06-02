@@ -84,9 +84,9 @@ while ($fila = $resultado->fetch_assoc()) {
 
     </div>
     <?php
-    include("pie.php");
 
-    ?>
-    <?php
 }
+include("pie.php");
+
+?>
 

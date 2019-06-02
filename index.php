@@ -30,8 +30,8 @@ else
     <div class="card card-image" style="background-image: url(img/pc.jpg);">
         <div class="text-white text-center rgba-stylish-strong py-5 px-4">
             <div class="py-5">
-                <h2 class="card-title h2 my-4 py-2">Tu tienda de componentes de informática</h2>
-                <p class="mb-4 pb-2 px-md-5 mx-md-5">Bienvenido!</p>
+                <h2 class="card-title h2 my-4 py-2 font-weight-bold">Tu tienda de informática</h2>
+                <p class="mb-4 pb-2 px-md-5 mx-md-5 font-weight-bold">Bienvenido!</p>
             </div>
         </div>
     </div>
